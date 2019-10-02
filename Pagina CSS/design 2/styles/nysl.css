@@ -1,0 +1,66 @@
+header {
+    background-image:url("../imagenes/design2_image1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+    position: relative;
+    bottom: -50px;
+}
+
+h1{
+    position: relative;
+    bottom: 50px;
+}
+
+img {
+    height: 125px;
+    width: 125px;
+    position: relative;
+    left: 2%;
+    top: 225px;
+    
+}
+
+nav{
+    position: relative;
+    left: 75%;
+    top: -150px;
+}
+
+nav>a{
+    color: white;
+    padding: 5px 5px;
+    border: black 2px solid;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+a.home{
+    background: greenyellow;
+}
+
+a.about{
+    background: blue;
+}
+
+a.contact{
+    background: blue;
+}
+
+h2.index{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    bottom: -10px;
+}
+
+article{
+    position: relative;
+    left: 200px;
+}
+
+h4 {
+    position: relative;
+    left: 50px;
+}
