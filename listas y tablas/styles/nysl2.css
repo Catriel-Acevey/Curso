@@ -4,15 +4,14 @@ header{
 section{
     margin-left: 8%;
 }
-article{
-    margin-left: 3%;
+table{
+    position: relative;
+    left: 0%;
 }
-span{
-    font-weight: bold;
+footer>p{
+    display: inline-block;
+    margin-right: 20%;
 }
-.sub{
-    margin-left: 3%;
-}
-p{
-    margin-left: 8%;
+table{
+    text-align: center;
 }

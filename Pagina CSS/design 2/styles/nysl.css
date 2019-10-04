@@ -1,7 +1,6 @@
 header {
     background-image:url("../imagenes/design2_image1.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 500px;
+    background-repeat: repeat;
     position: relative;
     bottom: -50px;
 }

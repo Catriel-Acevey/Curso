@@ -1,7 +1,6 @@
 header {
     background-image:url("../imagenes/design1_image1.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 500px;
+    background-repeat: repeat;
 }
 
 body{
@@ -29,7 +28,7 @@ h2.index{
 nav{
     position: absolute;
     left: 2%;
-    bottom: 410px;
+    bottom: 550px;
 }
 
 a.home{
@@ -54,6 +53,7 @@ article{
     position: relative;
     left: 20%;
     bottom: -40px;
+    width: 60%;
 }
 
 h4 {
