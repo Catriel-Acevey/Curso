@@ -1,0 +1,43 @@
+*{
+  margin:-3;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+    height: 20em;
+    background-image:url("../imagenes/design1_image1.jpg");
+    background-repeat: repeat;
+ }
+ nav{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 1em 0em;
+ }
+nav>div{
+    height: 0em;
+    width: 0em;
+    position: relative;
+    left: 75%;
+    bottom: 10em;
+}
+nav>div>img{
+    height: 15em;
+    width: 15em;
+}
+ aside{
+   width: 22%;
+   display: inline-block;
+   background-color: blue;
+ }
+ aside>ul{
+     text-align: center;
+ }
+ aside>ul>li{
+     margin-bottom: 1em;
+ }
+ section{
+   width: 77%;
+   display: inline-block;
+   background-color: green;
+ }

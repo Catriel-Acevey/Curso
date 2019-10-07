@@ -1,0 +1,10 @@
+*{
+margin: 0 -3px;
+}
+aside{
+display: inline-flex;
+}
+section{
+  display: inline-flex;
+
+}
