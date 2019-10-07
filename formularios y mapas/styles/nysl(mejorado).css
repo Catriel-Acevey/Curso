@@ -1,0 +1,104 @@
+* {
+    margin: -3;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 20em;
+    background-image: url("../imagenes/design1_image1.jpg");
+    background-repeat: repeat;
+}
+
+nav {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 1em 0em;
+}
+
+nav>div {
+    height: 0em;
+    width: 0em;
+    position: relative;
+    left: 75%;
+    bottom: 10em;
+}
+
+nav>div>img {
+    height: 15em;
+    width: 15em;
+}
+
+aside {
+    width: 22%;
+    height: 100em;
+    float: left;
+}
+
+aside>ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+aside>ul>li {
+    margin-bottom: 1em;
+}
+
+section {
+    width: 75%;
+    height: 100em;
+    display: inline-block;
+}
+
+article {
+    position: relative;
+    left: 50px;
+}
+
+table {
+    position: relative;
+    left: 0%;
+}
+
+footer>p {
+    display: inline-block;
+    margin-right: 20%;
+}
+
+table {
+    text-align: center;
+}
+
+section>ul {
+    margin-left: 5%;
+}
+
+li>ul {
+    margin-left: 5%;
+}
+
+.cuadrados {
+    list-style-type: square;
+}
+
+.letras {
+    list-style-type: lower-alpha;
+}
+
+.numeros {
+    list-style-type: decimal;
+}
+
+.circulos {
+    list-style-type: circle;
+}
+
+div {
+    margin-top: 1%;
+}
+
+input {
+    border: none;
+    border-bottom: thin solid black;
+}
