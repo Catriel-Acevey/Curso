@@ -1,3 +1,4 @@
+/*
 var someObject = { str: "Iniciando JavaScript ...", id: 5 };
 console.log(someObject);
 var myName = "Catriel";
@@ -109,3 +110,10 @@ var xInvertida;
 xInvertida = x.reverse(x);
 
 console.log(xInvertida);
+*/
+
+var cadena0='webmaster';
+var cadena0Ordenada;
+cadena0Ordenada=cadena0.sort();
+console.log(cadena0);
+console.log(cadena0Ordenada);
