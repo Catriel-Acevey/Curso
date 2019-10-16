@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <table id="senate-data">
+        <thead>
+            <th>Full Name</th>
+            <th>Party</th>
+            <th>State</th>
+            <th>Ages</th>
+            <th>% of Votes</th>
+
+        </thead>
+        <tbody id="mitabla">
+
+        </tbody>
+    </table>
+    <script src="pro-congress-113-senate.json"></script>
+    <script>
+        console.log();
+        var senadores = dataSenate.results[0].members;
+
+        function tablearSenadores(array) {
+            var caja = array.map(function(senador) {
+                return "<tr><td>" + senador.first_name + " " + senador.middle_name + " " + senador.last_name + "</td><td>" + "</tr>";
+            });
+            document.getElementById("mitabla").innerHTML = caja.join("");
+        }
+        tablearSenadores(senadores);
+        // document.getElementById("senate-data").innerHTML = JSON.stringify(dataSenate, null, 2);
+    </script>
+</body>
