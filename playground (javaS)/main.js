@@ -75,7 +75,6 @@ function imprimirValorPosicion(array, index) {
 imprimirValorPosicion(array, index);
 
 var array2 = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100];
-var arrayDeRepetidos;
 
 function imprimirRepetidos(array) {
     array2 = array;
@@ -110,64 +109,52 @@ xInvertida = x.reverse(x);
 
 console.log(xInvertida);
 
-var cadena0="webmaster";
-var cadena0Ordenada;
+var cadena0 = "webmaster";
+var cadena0Ordenada2;
 console.log(cadena0);
-function ordenarCadena2(cadena){
-    var array=cadena.split('');
-    var arrayOrdenado=array.sort();
-    cadena=arrayOrdenado.join('');
+
+function ordenarCadena2(cadena) {
+    var array = cadena.split('');
+    var arrayOrdenado = array.sort();
+    cadena = arrayOrdenado.join('');
     return cadena;
 }
-//function ordenarCadena(cadena){
-//    var aux;
-//    for(i=0;i<cadena.length;i++){
-//        for(e=o;e<(cadena.length-i);e++){
-//            if(cadena[e]>cadena[e+1]){
-//                aux=cadena[e];
-//                cadena[e]=cadena[e+1];
-//                cadena[e+1]=aux;
-//            }
-//        }
-//    }
-//    return cadena;
-//}
-//cadena0Ordenada=ordenarCadena(cadena0);
-cadena0Ordenada=ordenarCadena2(cadena0);
-console.log(cadena0Ordenada);
 
-var cadena1="prince of persia";
+cadena0Ordenada2 = ordenarCadena2(cadena0);
+console.log(cadena0Ordenada2);
+
+var cadena1 = "prince of persia";
 var cadena1Normalizada;
 console.log(cadena1);
 
-function normalizarCadena(cadena){
-    var matriz=cadena.split('');
-    matriz[0]=matriz[0].toUpperCase();
-    for(i=1; i<matriz.length; i++){
-        if(matriz[i-1]==' '){
-            matriz[i]=matriz[i].toUpperCase();
+function normalizarCadena(cadena) {
+    var matriz = cadena.split('');
+    matriz[0] = matriz[0].toUpperCase();
+    for (i = 1; i < matriz.length; i++) {
+        if (matriz[i - 1] == ' ') {
+            matriz[i] = matriz[i].toUpperCase();
         }
     }
-    cadena=matriz.join('');
+    cadena = matriz.join('');
     return cadena;
 }
-cadena1Normalizada=normalizarCadena(cadena1);
+cadena1Normalizada = normalizarCadena(cadena1);
 console.log(cadena1Normalizada);
 
-var cadena2="Tutorial de desarrollo web";
+var cadena2 = "Tutorial de desarrollo web";
 var palabraMasLarga;
 console.log(cadena2);
 
-function palabraMasLarga(cadena){
-    var array=cadena.split(' ');
-    var palabraMasLarga=array[0];
-    for(i=0; i<array.length; i++){
-        if(array[i].length > palabraMasLarga.length){
-            palabraMasLarga=array[i];
+function palabraMasLarga(cadena) {
+    var array = cadena.split(' ');
+    var palabraMasLarga = array[0];
+    for (i = 0; i < array.length; i++) {
+        if (array[i].length > palabraMasLarga.length) {
+            palabraMasLarga = array[i];
         }
     }
     return palabraMasLarga;
 }
 
-palabraMasLarga=palabraMasLarga(cadena2);
+palabraMasLarga = palabraMasLarga(cadena2);
 console.log(palabraMasLarga);

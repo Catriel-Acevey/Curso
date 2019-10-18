@@ -1,0 +1,22 @@
+header>div {
+    float: right;
+    margin-right: 5%;
+}
+
+header>div>a {
+    text-decoration: underline blue;
+}
+
+section {
+    width: 75%;
+    height: 100em;
+}
+
+aside {
+    width: 22%;
+    height: 100em;
+}
+
+.alineado {
+    display: inline-block;
+}
