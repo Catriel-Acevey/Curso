@@ -14,6 +14,10 @@ header>div>a {
     text-decoration: underline blue;
 }
 
+.alineado {
+    display: inline-block;
+}
+
 .alineado75 {
     width: 75%;
     display: inline-block;
@@ -24,13 +28,8 @@ header>div>a {
     display: inline-block;
 }
 
-.alineado {
-    display: inline-block;
-}
-
 table {
     border-collapse: collapse;
-    width: 92%;
     margin-left: 4%;
 }
 
