@@ -13,6 +13,7 @@ function obtenerSenadores(array, party) {
     return senadores;
 }
 
+
 var democratas = obtenerSenadores(senadores, "D");
 var independientes = obtenerSenadores(senadores, "I");
 var republicanos = obtenerSenadores(senadores, "R");
@@ -23,6 +24,7 @@ function promedioDeVotosConPartido(array) {
         promedio = promedio + array[i].votes_with_party_pct;
     }
     promedio = promedio / (array.length + 1);
+    promedio=promedio.toFixed([2]);
     return promedio;
 }
 
@@ -35,14 +37,43 @@ function obtenerPartido(array) {
     return "Independientes";
 }
 
-function tablearColumnaGlance(array) {
-    var caja = "<tr><td>" + obtenerPartido(array) + "</td><td>" + (array.length) + "</td><td>" + promedioDeVotosConPartido(array) + "</tr>";
+function tablearFilaGlance(array) {
+    var caja = "<tr><td>" + obtenerPartido(array) + "</td><td>" + (array.length) + "</td><td>" + promedioDeVotosConPartido(array) + "%" + "</tr>";
     return caja;
 }
 
-document.getElementById("tablaSenateGlance").innerHTML = tablearColumnaGlance(democratas) + tablearColumnaGlance(republicanos) + tablearColumnaGlance(independientes) + tablearColumnaGlance(senadores);
+document.getElementById("tablaSenateGlance").innerHTML = tablearFilaGlance(democratas) + tablearFilaGlance(republicanos) + tablearFilaGlance(independientes) + tablearFilaGlance(senadores);
 
+console.log(senadores);
 
 function ordenarMissed(array) {
-    array.sort();
+    array.sort(function(a, b){
+        return ((a.missed_votes)-(b.missed_votes));
+    });
 }
+
+ordenarMissed(senadores);
+
+function getName(string) {
+    if (string != null) {
+        return string;
+    } else {
+        return ("");
+    }
+}
+
+function tablear10ColumnaLeastEngaged(array){
+    var elements=document.createElement("tr");
+    var fila;
+    for(i=0; i<10; i++){
+        //var caja= "<tr><td>" + getName(array[i].first_name) + " " + getName(array[i].middle_name) + " " + getName(array[i].last_name) + "</tr>"
+        //return caja;
+        fila=document.createElement("td")
+        elements.append(getName(array[i].first_name) + " " + getName(array[i].middle_name) + " " + getName(array[i].last_name), fila);
+    }
+    tablaLeastEngaged.append(elements);
+}
+
+//document.getElementById("tablaLeastEngaged").innerHTML = tablearColumnaLeastEngaged(democratas);
+
+tablear10ColumnaLeastEngaged(senadores);
