@@ -28,9 +28,16 @@ header>div>a {
     display: inline-block;
 }
 
+.alineado49 {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 table {
     border-collapse: collapse;
     margin-left: 4%;
+    margin-bottom: 2%;
 }
 
 table,
