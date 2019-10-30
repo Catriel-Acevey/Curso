@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" dir="ltr">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +10,8 @@
 
 <body>
     <header>
-        <h1>TGIF Logo</h1>
+        <h1 class="alineado"><img src="Email and files m2task3\icono.png">TGIF Logo</h1>
+        <div class="alineado"><img src="Email and files m2task3\mail.png"><a href="#">info@tgif.net</a></div>
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -20,8 +21,8 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Congress 113
-                                            </a>
+                                        Congress 113
+                                </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="senate-data.html">Senate</a>
                         <a class="dropdown-item" href="house-data.html">House</a>
@@ -29,8 +30,8 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Attendance
-                                                </a>
+                                            Attendance
+                                    </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="senate-attendance.html">Senate</a>
                         <a class="dropdown-item" href="house-attendance.html">House</a>
@@ -38,8 +39,8 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Party Loyalty
-                                                </a>
+                                            Party Loyalty
+                                    </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="senate-party.html">Senate</a>
                         <a class="dropdown-item" href="house-party.html">House</a>
@@ -49,23 +50,58 @@
         </div>
     </nav>
     <section>
-        <h2>Senators</h2>
-        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several
-            exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military
-            officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.
-        </p>
-        <table id="senate-data">
-            <thead>
-                <th>Full Name</th>
-                <th>Party</th>
-                <th>State</th>
-                <th>Ages</th>
-                <th>% of Votes</th>
-            </thead>
-            <tbody id="mitabla">
+            <div class="alineado49">
+                <h2>Party Loyalty</h2>
+            <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. 
 
-            </tbody>
-        </table>
+            </p>
+            </div>
+            <div class="alineado49">
+                <h2>Senate at a glance</h2>
+                <table>
+                <thead>
+                    <tr>
+                        <th>Party</th>
+                        <th>Number of Reps</th>
+                        <th>% Voted with Prty</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaHouseGlance">
+
+                </tbody>
+                </table>
+            </div>
+        <div class="alineado49">
+            <h2>Least Loyal (Bottom 10% of Party)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number Party Votes</th>
+                        <th>% Party Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaHouseLeastLoyal">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="alineado49">
+            <h2>Most Loyal (Top 10% of Party)</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number Party Votes</th>
+                    <th>% Party Votes</th>
+                </tr>
+                </thead>
+                <tbody id="tablaHouseMostLoyal">
+
+                </tbody>
+            </table>
+        </div>
+        
     </section>
     <footer>
         <div class="jumbotron jumbotron-fluid">
@@ -74,28 +110,15 @@
             </div>
         </div>
     </footer>
-    <script src="pro-congress-113-senate.js"></script>
     <script>
-        var senadores = dataSenate.results[0].members;
-
-        function getName(string) {
-            if (string != null) {
-                return string;
-            } else {
-                return ("");
-            }
-        }
-
-        function tablearSenadores(array) {
-            var caja = array.map(function(senador) {
-                return "<tr><td>" + getName(senador.first_name) + " " + getName(senador.middle_name) + " " + getName(senador.last_name) + "</td><td>" + senador.party + "</td><td>" + senador.state + "</td><td>" + senador.seniority + "</td><td>" + "%" + senador.votes_with_party_pct + "</tr>";
-            });
-            document.getElementById("mitabla").innerHTML = caja.join("");
-        }
-        tablearSenadores(senadores);
+        var estoyen = "house-party";
     </script>
+    <script src="pro-congress-113-house.js"></script>
+    <script src="completarTablas.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
+
+</html>
