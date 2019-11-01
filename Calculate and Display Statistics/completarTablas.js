@@ -74,10 +74,10 @@ function getName(string) {
 }
 
 function porcentajeACantidad(member,campo){
-    var porcentaje=parseInt(member[campo]);
+    var porcentaje=parseFloat(member[campo]);
     if(porcentaje==0) return "0";
-    var cantidad=parseInt(member.total_votes)
-    cantidad=(cantidad*10)/porcentaje;
+    var cantidad=parseFloat(member.total_votes);
+    cantidad=(cantidad*porcentaje)/100;
     cantidad=cantidad.toFixed([0]);
     return (cantidad.toString(10));
 }
